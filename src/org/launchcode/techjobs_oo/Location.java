@@ -53,4 +53,5 @@ public class Location {
     public void setValue(String value) {
         this.value = value;
     }
+
 }
