@@ -29,6 +29,35 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    @Override
+    public String toString() {
+        String jobString = "" + "\nID: " + id;
+        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) {
+            return "OOPS! This job does not seem to exist!";
+        }
+        if (name == null) {
+            jobString = jobString.concat("\nName: Data not available");
+        } else
+            jobString = jobString.concat("\nName: " + name);
+        if (employer == null) {
+            jobString = jobString.concat("\nEmployer: Data not available");
+        } else
+            jobString = jobString.concat("\nEmployer: " + employer);
+        if (location == null) {
+            jobString = jobString.concat("\nLocation: Data not available");
+        } else
+            jobString = jobString.concat("\nLocation: " + location);
+        if (positionType == null) {
+            jobString = jobString.concat("\nPosition Type: Data not available");
+        } else
+            jobString = jobString.concat("\nPosition Type: " + positionType);
+        if (coreCompetency == null) {
+            jobString = jobString.concat("\nCore Competency: Data not available");
+        } else
+            jobString = jobString.concat("\nCore Competency: " + coreCompetency);
+        return jobString;
+    }
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
