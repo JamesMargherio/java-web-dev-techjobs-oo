@@ -32,29 +32,29 @@ public class Job {
     @Override
     public String toString() {
         String jobString = "" + "\nID: " + id;
-        if (name == null && employer == null && location == null && positionType == null && coreCompetency == null) {
-            return "OOPS! This job does not seem to exist!";
+        if (name.equals("") && employer.getValue().equals("") && location.getValue().equals("") && positionType.getValue().equals("") && coreCompetency.getValue().equals("")) {
+            return "\nOOPS! This job does not seem to exist!";
         }
-        if (name == null) {
+        if (name.equals("")) {
             jobString = jobString.concat("\nName: Data not available");
         } else
             jobString = jobString.concat("\nName: " + name);
-        if (employer == null) {
+        if (employer.getValue().equals("")) {
             jobString = jobString.concat("\nEmployer: Data not available");
         } else
             jobString = jobString.concat("\nEmployer: " + employer);
-        if (location == null) {
+        if (location.getValue().equals("")) {
             jobString = jobString.concat("\nLocation: Data not available");
         } else
             jobString = jobString.concat("\nLocation: " + location);
-        if (positionType == null) {
+        if (positionType.getValue().equals("")) {
             jobString = jobString.concat("\nPosition Type: Data not available");
         } else
             jobString = jobString.concat("\nPosition Type: " + positionType);
-        if (coreCompetency == null) {
+        if (coreCompetency.getValue().equals("")) {
             jobString = jobString.concat("\nCore Competency: Data not available");
         } else
-            jobString = jobString.concat("\nCore Competency: " + coreCompetency);
+            jobString = jobString.concat("\nCore Competency: " + coreCompetency + "\n");
         return jobString;
     }
 
