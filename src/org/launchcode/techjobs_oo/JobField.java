@@ -23,6 +23,14 @@ public abstract class JobField {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof JobField)) return false;
+        JobField jobJob = (JobField) o;
+        return getId() == jobJob.getId();
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(getId());
     }

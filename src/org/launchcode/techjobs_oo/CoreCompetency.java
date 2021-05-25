@@ -28,13 +28,13 @@ public class CoreCompetency extends JobField{
 //        return value;
 //    }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof CoreCompetency)) return false;
-        CoreCompetency that = (CoreCompetency) o;
-        return id == that.id;
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof CoreCompetency)) return false;
+//        CoreCompetency that = (CoreCompetency) o;
+//        return id == that.id;
+//    }
 
 //    @Override
 //    public int hashCode() {
